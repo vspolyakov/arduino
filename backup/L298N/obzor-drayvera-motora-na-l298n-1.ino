@@ -1,0 +1,47 @@
+// Двигатель A 
+int enA = 9;
+int in1 = 8;
+int in2 = 7;
+// Двигатель B
+int enB = 3;
+int in3 = 5;
+int in4 = 4;
+
+void setup()
+{
+  pinMode(enA, OUTPUT);
+  pinMode(enB, OUTPUT);
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  pinMode(in3, OUTPUT);
+  pinMode(in4, OUTPUT);
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+}
+
+void loop()
+{
+// Установка двигателя A и B на максимальную скорость (0 ... 255)
+  analogWrite(enA, 150);   
+  analogWrite(enB, 100);
+// Вращение двигателем A и B вперед
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);
+  delay(9000);
+// Вращение двигателем A и B назад
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);
+  delay(9000);
+// Отключение мотора A и B
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+  delay(9000);
+}
