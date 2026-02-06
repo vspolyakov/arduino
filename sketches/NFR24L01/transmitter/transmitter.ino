@@ -7,8 +7,9 @@
 
 #include <SPI.h>
 #include <RF24.h>
-RF24 radio(9, 10); // порты D9, D10: CSN CE
-const uint32_t pipe = 111156789; // адрес рабочей трубы;
+
+RF24 radio(9, 10);                // порты D9, D10: CSN CE
+const uint32_t pipe = 111156789;  // адрес рабочей трубы;
 
 byte data;
 
